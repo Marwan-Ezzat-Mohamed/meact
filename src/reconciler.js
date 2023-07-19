@@ -164,7 +164,7 @@ function deleteFiber(fiber) {
 
 function reconcileChildren(wipFiber, elements) {
   let index = 0;
-  let oldFiber = wipFiber.alternate && wipFiber.alternate.child;
+  let oldFiber = wipFiber.alternate?.child;
   let prevSibling = null;
 
   while (index < elements.length || oldFiber != null) {
@@ -174,37 +174,20 @@ function reconcileChildren(wipFiber, elements) {
     const sameType = oldFiber && element && element.type == oldFiber.type;
 
     if (sameType) {
-      newFiber = {
-        type: oldFiber.type,
-        props: element.props,
-        dom: oldFiber.dom,
-        parent: wipFiber,
-        alternate: oldFiber,
-        effectTag: "UPDATE",
-      };
+      newFiber = updateFiber(oldFiber, element, wipFiber);
     }
     if (element && !sameType) {
-      newFiber = {
-        type: element.type,
-        props: element.props,
-        dom: null,
-        parent: wipFiber,
-        alternate: null,
-        effectTag: "PLACEMENT",
-      };
+      newFiber = createFiber(element, wipFiber);
     }
     if (oldFiber && !sameType) {
-      oldFiber.effectTag = "DELETION";
-      deletions.push(oldFiber);
+      deleteFiber(oldFiber);
     }
 
-    if (oldFiber) {
-      oldFiber = oldFiber.sibling;
-    }
+    oldFiber = oldFiber?.sibling;
 
     if (index === 0) {
       wipFiber.child = newFiber;
-    } else if (element) {
+    } else {
       prevSibling.sibling = newFiber;
     }
 
