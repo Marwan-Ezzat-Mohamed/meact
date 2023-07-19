@@ -1,4 +1,4 @@
-import Meact from "./src";
+import Meact from "./index.js";
 
 function App() {
   const [counter, setCounter] = Meact.useState(1);
