@@ -2,7 +2,7 @@
 
 Meact is a lightweight and simplified version of React, designed to provide a basic understanding of how React works under the hood. It follows a similar component-based architecture and implements a subset of React's features.
 
-This project is inspired by [Didact](https://github.com/pomber/didact), a minimal implementation of React created by Rodolfo Pombeiro. Meact builds upon the concepts and ideas presented in Didact, with some modifications and enhancements.
+This project is inspired by [Didact](https://github.com/pomber/didact), a minimal implementation of React created by Rodrigo Pombo. Meact builds upon the concepts and ideas presented in Didact, with some modifications and enhancements.
 
 ## Features
 
