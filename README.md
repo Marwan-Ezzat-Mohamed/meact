@@ -20,7 +20,7 @@ To get started with Meact, you can follow these steps:
 
 1. Install Meact in your project:
    ```shell
-   $ npm install create-meact-app
+   $ npm install -g create-meact-app
    ```
 2. Create a new Meact project:
    ```shell
