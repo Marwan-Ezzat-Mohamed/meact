@@ -56,10 +56,7 @@ function useState(initial) {
 }
 
 function useEffect(callback, dependencies) {
-  const oldHook =
-    wipFiber.alternate &&
-    wipFiber.alternate.hooks &&
-    wipFiber.alternate.hooks[hookIndex];
+  const oldHook = wipFiber.alternate?.hooks?.[hookIndex];
 
   const hook = {
     callback: callback,
