@@ -39,10 +39,6 @@ To get started with Meact, you can follow these steps:
 Contributing
 Contributions to Meact are welcome! If you find any issues, have feature suggestions, or want to contribute to the project, feel free to submit a pull request or open an issue on the Meact GitHub repository. -->
 
-## Documentation
-
-For detailed documentation and usage examples, please refer to the [Meact GitHub repository](https:// github.com/Meact/Meact). The repository contains the source code, and an example.
-
 ## Contributing
 
 Contributions to Meact are welcome! If you find any issues, have feature suggestions, or want to contribute to the project, feel free to submit a pull request or open an issue on the Meact GitHub repository.
